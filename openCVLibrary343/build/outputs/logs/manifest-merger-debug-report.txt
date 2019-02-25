@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:1-11:12
+	package
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:3:7-27
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:5:7-34
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:4:7-33
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:6:1-61
+	android:name
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:6:18-58
+uses-feature#android.hardware.camera2
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:7:5-85
+	android:required
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:7:60-83
+	android:name
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:7:19-59
+uses-feature#android.hardware.camera2.autofocus
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:8:5-95
+	android:required
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:8:70-93
+	android:name
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:8:19-69
+uses-feature#android.hardware.camera2.front
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:9:5-92
+	android:required
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:9:66-90
+	android:name
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:9:19-65
+uses-feature#android.hardware.camera2.front.autofocus
+ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:10:5-102
+	android:required
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:10:76-100
+	android:name
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml:10:19-75
+uses-sdk
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		ADDED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\293746\Downloads\opencv_native_androidstudio-master (1)\willthiswork\openCVLibrary343\src\main\AndroidManifest.xml

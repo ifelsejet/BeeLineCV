@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.opencv"
+      android:versionCode="3430"
+      android:versionName="3.4.3">
+<uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name= "android.hardware.camera2" android:required="true"/>
+    <uses-feature android:name= "android.hardware.camera2.autofocus" android:required="true"/>
+    <uses-feature android:name= "android.hardware.camera2.front" android:required="false"/>
+    <uses-feature android:name= "android.hardware.camera2.front.autofocus" android:required="false"/>
+</manifest>
