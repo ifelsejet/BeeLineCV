@@ -1,14 +1,22 @@
 package com.example.willthiswork;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -41,6 +49,13 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
     private CameraBridgeViewBase mOpenCvCameraView;
 
+    ImageButton imageButton;
+    Camera camera;
+    android.hardware.Camera.Parameters parameters;
+    boolean isflash=false;
+    boolean ison=false;
+
+
     private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -63,6 +78,14 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Log.i(TAG, "Instantiated new " + this.getClass());
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
+
+    }
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,11 +94,84 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        setContentView(R.layout.color_blob_detection_surface_view);
+        setContentView(R.layout.main_activity);
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.color_blob_detection_activity_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
+
+        imageButton=(ImageButton)findViewById(R.id.imageButton);
+        if(getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)){
+
+            camera=android.hardware.Camera.open();
+            parameters=camera.getParameters();
+            isflash=true;
+
+        }
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                if (isflash) {
+
+                    if (!ison) {
+
+                        imageButton.setImageResource(R.drawable.on);
+                        parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                        camera.setParameters(parameters);
+                        camera.startPreview();
+                        ison=true;
+
+                    }
+
+                    else {
+
+                        imageButton.setImageResource(R.drawable.off);
+                        parameters.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                        camera.setParameters(parameters);
+                        Camera.stopPreview();
+                        ison=false;
+
+                    }
+
+
+                }
+
+                else {
+
+                    AlertDialog.Builder builder = new AlertDialog().Builder(MainActivity.this);
+                    builder.setTitle("Error...");
+                    builder.setMessage("Flash Light is not Available on this device.");
+                    builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Dialog dialog = null;
+                            dialog.dismiss();
+                            finish();
+                        }
+                    });
+                    AlertDialog alertDialog=builder.create();
+                    alertDialog.show();
+
+                }
+
+            }
+
+
+        });
+
+    }
+
+    @Override
+    protected void onStop ()
+    {
+        super.onStop();
+        if (camera!=null)
+        {
+            camera.release();
+            camera=null;
+
+        }
     }
 
     @Override
