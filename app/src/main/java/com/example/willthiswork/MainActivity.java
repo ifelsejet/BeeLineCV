@@ -3,6 +3,7 @@ package com.example.willthiswork;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -39,10 +40,10 @@ import org.opencv.imgproc.Imgproc;
 
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
     private static final String  TAG = "MainActivity"; // in this activity, I commented everything concerning the color detection out in order to transfer accurately
 
-    private SectionsStatePageAdapter mSectionsStatePagerAdapter;
+    private SectionsStatePagerAdapter mSectionsStatePagerAdapter;
     private ViewPager mViewPager;
 
     /*private boolean              mIsColorSelected = false;
@@ -92,13 +93,20 @@ public class MainActivity extends Activity {
 
     } //menu inflater for title
 
+
+    public void setViewPager (int fragmentNumber) {
+        mViewPager.setCurrentItem(fragmentNumber);
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "called onCreate");
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: started.");
 
+        mSectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.container);
+        setupViewPager(mViewPager);
+
 
         /*requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // color blob code
@@ -159,8 +167,9 @@ public class MainActivity extends Activity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        SectionStatePageAdapter adapter = new SectionStatePageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Fragment1(), "Fragment1");
+        SectionsStatePagerAdapter adapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Fragment(), "Second Activity");
+        viewPager.setAdapter(adapter);
     }
 
     @Override
